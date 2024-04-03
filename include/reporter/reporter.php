@@ -1,16 +1,5 @@
 <?php
 
-/* Why this function is not a part of the below class? This code looks messy!
- *
- * - Because this code can work standalone, as plugin for any application, but it
- *   is also directly included into our link analysis and unbranding application.
- *
- *   And in internal mode:
- *   - we didn't want to duplicate functions like this or get_domain_from_url
- *     (and then have to duplicate possible future fixes)
- *   - Polskieai_Link_Reporter class is not used - instead we have much bigger
- *     class with link analysis logic, with very similar interface
- */
 function get_url_from_link_parameters($parameters)
 {
     $tmp = explode(' ', $parameters);

@@ -17,7 +17,7 @@ It discovers links in html files - including:
 The main goal of this code is to **save as many broken/poisoned/disabled/otherwise invalid links as possible
 from being rejected at this stage**, and push them for later processing.
 
-This library can be attached to any soft of PHP application:
+This library can be attached to any sort of PHP application:
 - Pastebin clone
 - Reddit-like or any other forum application
 - MediaWiki
@@ -28,7 +28,7 @@ This library can be attached to any soft of PHP application:
 
 # What happens next?
 
-All such links are stored in text files, that can be transferred to central application for later processing.
+All discovered links are stored in text files, that can be transferred to central application for later processing.
 
 We use it to feed our crawler, that continously walks through the whole Internet searching for content in polish
 language - all domains extracted from these links are scanned for RSS/Atom feeds and sitemap files.
@@ -36,12 +36,11 @@ language - all domains extracted from these links are scanned for RSS/Atom feeds
 
 # Important security notes
 
-This plugin performs only very minimal validation of discovered links, just enough to prevent possibly malicious
+This plugin performs only **very minimal validation** of discovered links, just enough to prevent possibly malicious
 content from interfering filesystem operations. This does NOT yet mean that such links are fully recovered, or secure for
 processing in any way.
 
-Full recovery and security filtering (eg. filtering malicious Unicode characters) is done at later stage, inside
-our private application.
+Full recovery and security filtering (eg. filtering malicious Unicode characters) is done later, inside our private application.
 
 
 # How about GDPR and privacy?
